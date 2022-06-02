@@ -59,17 +59,19 @@ void Toa::xepPhong(Phong* a, SinhVien x)
         a->add(x);
 }
 
-void Toa::add(int soPhong, int sucChua)
+bool Toa::add(int soPhong, int sucChua)
 {
     if (!this->getPhongSo(soPhong) && this->getSucChua() < this->getSoLuongPhong())
-        this->phong.push_back(Phong(soPhong, this->toa, sucChua));
+        return this->phong.push_back(Phong(soPhong, this->toa, sucChua)), 1;
+    return 0;
 }
 
-void Toa::del(int soPhong)
+bool Toa::del(int soPhong)
 {
     for (int i = 0; i < this->phong.size(); ++i)
         if (this->phong[i].getSoPhong() == soPhong)
-            this->phong.erase(this->phong.begin() + i);
+            return this->phong.erase(this->phong.begin() + i), 1;
+    return 0;
 }
 
 Phong* Toa::getPhongSo(int soPhong)
@@ -79,4 +81,12 @@ Phong* Toa::getPhongSo(int soPhong)
             return &x;
 
     return NULL;
+}
+
+void Toa::inThongTinPhong()
+{
+    for (auto x: this->phong)
+    {
+        cout << "Phong " << x.getSoPhong() << ", toa " << x.getToa() << ", suc chua " << x.getSucChua() << ", con trong " << x.getSucChua() - x.getSoLuongSinhVien() << '\n';
+    }
 }
