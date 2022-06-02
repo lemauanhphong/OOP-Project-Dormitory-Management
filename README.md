@@ -42,13 +42,16 @@
         - `vector <SinhVien> sinhVien`: danh sách sinh viên ở trong phòng.
 
     - Phương thức: Ngoài constructor và destructor ra lớp `Phong` còn có các phương thức sau:
-        - `int intSoPhong()`
-        - `void setSoPhong(int soPhong = 1)`
-        -
-        -
-        -
-        -
-        -
+        - `int getSoPhong()`: getter trả về số phòng.
+        - `void setSoPhong(int soPhong = 1)`:: setter số phòng.
+        - `string getToa()`: getter tên của tòa mà phòng thuộc về.
+        - `void setToa(string tenToa = "lmao")`: setter gán tên của tòa mà phòng thuộc về.
+        - `int getSucChua()`: getter trả về sức chứa của phòng.
+        - `void setSucChua(int sucChua = 4)`: setter sức chứa của phòng.
+        - `vector <SinhVien>* getSinhVien()`: trả về con trỏ trỏ tới danh sách sinh viên đang ở trong phòng.
+        - `int getSoLuongSinhVien()`: trả về số lượng sinh viên đang sử dụng phòng.
+        - `void del(SinhVien a)`: tìm sinh viên `a` và xóa sinh viên `a` ra khỏi phòng.
+        - `void add(SinhVien a)`: thêm sinh viên `a` vào phòng nếu phòng còn chỗ trống.
 
 ## 3. Nhận xét về chương trình:
 - Chương trình đã qua được bài test cơ bản của nhóm.
