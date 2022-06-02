@@ -90,3 +90,17 @@ void Toa::inThongTinPhong()
         cout << "Phong " << x.getSoPhong() << ", toa " << x.getToa() << ", suc chua " << x.getSucChua() << ", con trong " << x.getSucChua() - x.getSoLuongSinhVien() << '\n';
     }
 }
+
+bool Toa::isEmpty()
+{
+    for (auto x: this->phong)
+        if (!x.isEmpty()) return 0;
+    return 1;
+}
+
+bool Toa::isFull()
+{
+    for (auto x: this->phong)
+        if (!x.isFull()) return 1;
+    return 0;
+}

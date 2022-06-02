@@ -26,4 +26,6 @@ class Phong
         bool del(SinhVien a);
         // void find(SinhVien a);
         bool add(SinhVien a);
+        bool isFull();
+        bool isEmpty();
 };

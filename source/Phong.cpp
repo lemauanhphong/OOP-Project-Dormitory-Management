@@ -76,3 +76,13 @@ bool Phong::add(SinhVien a)
 // {
 //     for (auto x: )
 // }
+
+bool Phong::isEmpty()
+{
+    return this->getSoLuongSinhVien() == 0;
+}
+
+bool Phong::isFull()
+{
+    return this->getSoLuongSinhVien() == this->sucChua;
+}

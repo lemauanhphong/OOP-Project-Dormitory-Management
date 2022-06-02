@@ -25,4 +25,6 @@ class Toa
         bool add(int soPhong, int sucChua);
         bool del(int soPhong);
         void inThongTinPhong();
+        bool isEmpty();
+        bool isFull();
 };

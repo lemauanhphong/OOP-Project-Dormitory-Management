@@ -9,10 +9,17 @@
 - Môn IT002.M21.ANTN (thực hành)
 
 ## 1. Giới thiệu:
-- Chương trình quản lý sinh viên ký túc xá đơn giản với các tính năng thêm sinh viên, sửa thông tin sinh viên, xóa thông tin của sinh viên.
+- Chương trình quản lý sinh viên ký túc xá đơn giản với các tính năng sau:
+    - In ra thông tin ký túc xá.
+    - Sua thong tin ký túc xá.
+    - In ra thông tin của tòa nhà.
+    - In ra thông tin của phòng.
+    - Đăng kí cho sinh viên mới.
+    - Hủy đăng kí cho sinh viên chuyển đi.
 - Sử dụng ngôn ngữ lập trình C++, các kết quả được xử lý và viết ra console.
 
 ## 2. Ý tưởng thực hiện:
+- Cần có một lớp biểu diễn ký túc xá, ký túc xá tương tác trực tiếp với tòa nhà, tòa nhà tương tác trực tiếp với phòng ở, phòng ở sẽ tương tác trực tiếp với sinh viên.
 - Xây dựng lớp `KTX` để biểu diễn ký túc xá:
 -   Xây dựng lớp `SinhVien` kế thừa từ lớp `Human` dể biểu diễn sinh viên:
     -   Lớp `Human`:
@@ -64,6 +71,8 @@
         - `bool add(int soPhong, int sucChua)`: thêm một phòng với sức chứa của phòng là `sucChua` và số của phòng là `soPhong` nếu chưa phòng nào lấy số đó. Hàm trả về `true` nếu thêm thành công và `false` nếu ngược lại.
         - `bool del(int soPhong)`: tìm trong tòa phòng có số phòng là `soPhong` và xóa nó ra khỏi tòa. Hàm trả về `true` nếu xóa thành công và `false` nếu ngược lại.
         - `void inThongTinPhong()`: In ra thông tin của các phòng có trong tòa.
+        - `bool isEmpty()`: Kiểm tra xem trong tòa có sinh viên nào đang ở không. Trả về `true` nếu tòa không có sinh viên nào đang ở, `false` nếu ngược lại.
+        - `bool isFull()`: Kiểm tra xem tòa đã hết chỗ chưa. Trả về `true` nếu tòa đã hết chỗ, ngược lại trả về `false`.
         
 
 - Xây dựng lớp `Phong` để biểu diễn phòng ở của sinh viên:
@@ -84,6 +93,8 @@
         - `int getSoLuongSinhVien()`: trả về số lượng sinh viên đang sử dụng phòng.
         - `void del(SinhVien a)`: tìm sinh viên `a` và xóa sinh viên `a` ra khỏi phòng. Hàm trả về `true` nếu xóa thành công và `false` nếu ngược lại.
         - `void add(SinhVien a)`: thêm sinh viên `a` vào phòng nếu phòng còn chỗ trống. Hàm trả về `true` nếu thêm thành công và `false` nếu ngược lại.
+        - `bool isEmpty()`: Kiểm tra xem trong phòng có sinh viên nào đang ở không. Trả về `true` thì phòng hiện đang không có sinh viên nào ở, `false` nếu ngược lại.
+        - `bool isFull()`: Kiểm tra xem phòng đã hết chỗ chưa. Trả về  `true` nếu phòng đã hết chỗ, `false` nêu ngược lại.
 
 ## 3. Nhận xét về chương trình:
 - Chương trình đã qua được bài test cơ bản của nhóm.
