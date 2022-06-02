@@ -1,16 +1,18 @@
 #ifndef SINHVIEN_H
 #define SINHVIEN_H
+
 #include <bits/stdc++.h>
 #include "human.h"
 using namespace std;
 
 
-class sinhvien : public human
+class SinhVien : public human
 {
     public:
-        sinhvien();
-        ~sinhvien();
-        void thong_tin();
+        SinhVien();
+        SinhVien(string Ten ,string Id,int Tuoi, string Sdt, string Mssv,string Truong, string Toa, string Khoa, int SoPhong);
+        ~SinhVien();
+        void thongTin(); /// print all information related to SinhVien
         string getToa();///getter toa
         void setToa(string a);///setter toa
         int getPhong();/// getter SoPhong
@@ -23,11 +25,11 @@ class sinhvien : public human
         void setTruong(string a); /// setter Truong
 
     protected:
-        string Mssv;
-        string Truong;
+        string mssv;
+        string truong;
         string toa; /// toa ktx sinh vien dang o
-        string Khoa;
-        int SoPhong; /// phong o bn
+        string khoa;
+        int soPhong; /// phong o bn
 
     private:
 };
