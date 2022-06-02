@@ -43,11 +43,18 @@ vector <Phong>* Toa::getPhong()
     return &(this->phong);
 };
 
-Phong* Toa::getPhongTrong()
+vector <Phong*> Toa::getPhongTrong()
 {
+    vector <Phong*> ret;
     for (auto x: this->phong)
         if (x.getSoLuongSinhVien < x.getSucChua)
-            return &x;
+            ret.push_back(&x);
             
-    return NULL;
+    return ret;
+}
+
+void Toa::xepPhong(Phong* a, SinhVien x)
+{
+    if (a->getSucChua > a->getSoLuongSinhVien && a->getToa == this->toa)
+        a.add(x);
 }

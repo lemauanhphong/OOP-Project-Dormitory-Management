@@ -19,5 +19,6 @@ class Toa
         vector <Phong>* getPhong();
         int getSucChua();
         void setSucChua();
-        Phong* getPhongTrong();
+        vector <Phong*> getPhongTrong();
+        void xepPhong(Phong* a, SinhVien x);
 };
