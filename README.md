@@ -61,8 +61,8 @@
         - `vector <Phong*> getPhongTrong()`: lấy danh sách các phòng trống, dùng để xếp phòng cho sinh viên.
         - `void xepPhong(Phong* a, SinhVien x)`: thêm có thể thêm sinh viên `x` vào phòng `a`.
         - `Phong* getPhongSo(int soPhong)`: trả về con trỏ chưa phòng có số là `soPhong` nếu phòng đó không tồn tại hoặc không còn chỗ trống thì trả về `NULL`.
-        - `void add(int soPhong, int sucChua)`: thêm một phòng với sức chứa của phòng là `sucChua` và số của phòng là `soPhong` nếu chưa phòng nào lấy số đó.
-        - `void del(int soPhong)`: tìm trong tòa phòng có số phòng là `soPhong` và xóa nó ra khỏi tòa.
+        - `bool add(int soPhong, int sucChua)`: thêm một phòng với sức chứa của phòng là `sucChua` và số của phòng là `soPhong` nếu chưa phòng nào lấy số đó. Hàm trả về `true` nếu thêm thành công và `false` nếu ngược lại.
+        - `bool del(int soPhong)`: tìm trong tòa phòng có số phòng là `soPhong` và xóa nó ra khỏi tòa. Hàm trả về `true` nếu xóa thành công và `false` nếu ngược lại.
         
 
 - Xây dựng lớp `Phong` để biểu diễn phòng ở của sinh viên:
@@ -81,8 +81,8 @@
         - `void setSucChua(int sucChua = 4)`: setter sức chứa của phòng.
         - `vector <SinhVien>* getSinhVien()`: trả về con trỏ trỏ tới danh sách sinh viên đang ở trong phòng.
         - `int getSoLuongSinhVien()`: trả về số lượng sinh viên đang sử dụng phòng.
-        - `void del(SinhVien a)`: tìm sinh viên `a` và xóa sinh viên `a` ra khỏi phòng.
-        - `void add(SinhVien a)`: thêm sinh viên `a` vào phòng nếu phòng còn chỗ trống.
+        - `void del(SinhVien a)`: tìm sinh viên `a` và xóa sinh viên `a` ra khỏi phòng. Hàm trả về `true` nếu xóa thành công và `false` nếu ngược lại.
+        - `void add(SinhVien a)`: thêm sinh viên `a` vào phòng nếu phòng còn chỗ trống. Hàm trả về `true` nếu thêm thành công và `false` nếu ngược lại.
 
 ## 3. Nhận xét về chương trình:
 - Chương trình đã qua được bài test cơ bản của nhóm.
