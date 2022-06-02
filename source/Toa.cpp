@@ -42,3 +42,12 @@ vector <Phong>* Toa::getPhong()
 {
     return &(this->phong);
 };
+
+Phong* Toa::getPhongTrong()
+{
+    for (auto x: this->phong)
+        if (x.getSoLuongSinhVien < x.getSucChua)
+            return &x;
+            
+    return NULL;
+}
