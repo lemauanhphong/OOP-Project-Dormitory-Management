@@ -111,7 +111,7 @@
         - `bool isFull()`: Kiểm tra xem phòng đã hết chỗ chưa. Trả về  `true` nếu phòng đã hết chỗ, `false` nêu ngược lại.
 
 ## 3. Nhận xét về chương trình:
-- Chương trình đã qua được bài test cơ bản của nhóm.
+- Chương trình vẫn đang trong quá trình hoàn thiện.
 - Chương trình chưa sử dụng giao diện đồ họa.
 - Hướng phát triển:
     - Sử dụng đồ họa.
