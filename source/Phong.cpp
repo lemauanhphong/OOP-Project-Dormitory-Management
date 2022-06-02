@@ -49,6 +49,11 @@ vector <SinhVien>* Phong::getSinhVien()
     return &(this->sinhVien);
 }
 
+int Phong::getSoLuongSinhVien()
+{
+    return this->sinhVien.size();
+}
+
 void Phong::del(SinhVien a)
 {
     for (int i = 0; i < this->sinhVien.size(); ++i)

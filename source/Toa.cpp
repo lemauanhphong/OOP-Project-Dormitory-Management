@@ -22,6 +22,11 @@ void Toa::setToa(string toa)
     this->toa = toa;
 }
 
+int Toa::getSoLuongPhong()
+{
+    return this->phong.size();
+}
+
 vector <Phong>* Toa::getPhong()
 {
     return &(this->phong);

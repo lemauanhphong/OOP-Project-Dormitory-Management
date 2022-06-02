@@ -14,5 +14,6 @@ class Toa
         ~Toa();
         string getToa();
         void setToa(string toa = "AH1");
+        int getSoLuongPhong();
         vector <Phong>* getPhong();
 };
