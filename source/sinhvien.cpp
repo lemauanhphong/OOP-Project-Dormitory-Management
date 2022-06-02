@@ -17,3 +17,11 @@ SinhVien::SinhVien(string Ten ,string Id,int Tuoi, string Sdt, string Mssv,strin
     soPhong = SoPhong;
 
 }
+void SinhVien::thongTin()
+{
+    cout<<"HoTen : "<<ten<<"\n";
+    cout<<"Mssv : "<<mssv<<"\n";
+    cout<<"Sinh vien truong : "<<truong<<"\n";
+    cout<<"Khoa : "<<khoa<<"\n";
+    cout<<"Noi o hien tai : KTX toa"<<toa<<" , phong : "<<soPhong<<"\n";
+}
