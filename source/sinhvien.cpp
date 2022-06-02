@@ -65,3 +65,7 @@ void SinhVien::setSoPhong(int a)
 {
     soPhong = a;
 }
+bool operator == (SinhVien a,SinhVien b)
+{
+    return (a.ten == b.ten) && (a.id == b.id) && (a.mssv == b.mssv) && (a.khoa == b.khoa) && (a.toa == b.toa) && (a.sdt == b.sdt) && (a.truong == b.truong) && (a.soPhong == b.soPhong);
+}

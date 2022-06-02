@@ -9,12 +9,10 @@ class human
 
     public:
         human();
-        human(string Ten ,string Id,int Tuoi, string Sdt);/// have to input all parameter, so if it's bugged, it will be easy to find
+        human(string Ten ,string Id, string Sdt);/// have to input all parameter, so if it's bugged, it will be easy to find
         ~human();
         string getTen(); /// getter name
         void setTen(string a); ///setter name
-        int getTuoi(); /// getter age
-        void setTuoi(int a); ///setter Age
         string getId(); ///getter id, id is cccd or cmnd
         void setId(string a); ///setter id
         string getSdt();/// getter sdt
@@ -23,7 +21,6 @@ class human
     protected:
         string ten;
         string id;
-        int tuoi;
         string sdt;
 };
 
