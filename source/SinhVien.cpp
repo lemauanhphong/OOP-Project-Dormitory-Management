@@ -66,6 +66,21 @@ void SinhVien::setSoPhong(int a)
 {
     soPhong = a;
 }
+void SinhVien::nhapThongTin()
+{
+    cout<<"Ho ten sinh vien:\n";
+    cin>>ten;
+    cout<<"So cccd/cmnd:\n";
+    cin>>id;
+    cout<<"So dien thoai:\n";
+    cin>>sdt;
+    cout<<"Ma so sinh vien:\n";
+    cin>>mssv;
+    cout<<"Truong sinh vien dang theo hoc:\n";
+    cin>>truong;
+    cout<<"Khoa sinh vien dang theo hoc:\n";
+    cin>>khoa;
+}
 bool operator == (SinhVien a,SinhVien b)
 {
     return (a.ten == b.ten) && (a.id == b.id) && (a.mssv == b.mssv) && (a.khoa == b.khoa) && (a.toa == b.toa) && (a.sdt == b.sdt) && (a.truong == b.truong) && (a.soPhong == b.soPhong);

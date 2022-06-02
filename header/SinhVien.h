@@ -23,6 +23,7 @@ class SinhVien : public Human
         void setKhoa(string a); ///setter Khoa
         string getTruong();/// getter Truong
         void setTruong(string a); /// setter Truong
+        void nhapThongTin(); ///nhap thong tin cua sinh vien
         friend bool operator ==(SinhVien a,SinhVien b);
     protected:
         string mssv;
