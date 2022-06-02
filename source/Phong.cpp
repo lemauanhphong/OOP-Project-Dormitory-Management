@@ -58,18 +58,18 @@ void Phong::del(SinhVien a)
 {
     for (int i = 0; i < this->sinhVien.size(); ++i)
         if (this->sinhVien[i] == a)
-        {
-            this->sinhVien.erase(this->sinhVien.begin() + i);
-            break;
-        }
+            return this->sinhVien.erase(this->sinhVien.begin() + i), 1;
+            
+    return 0;
 }
 
-void Phong::add(SinhVien a)
+bool Phong::add(SinhVien a)
 {
-    if (this->getSucChua() <= this->getSoLuongSinhVien()) return;
+    if (this->getSucChua() <= this->getSoLuongSinhVien()) return 0;
     a.setSoPhong(this->soPhong);
     a.setToa(this->toa);
     this->sinhVien.push_back(a);
+    return 1;
 }
 
 // void Phong::find(SinhVien a)

@@ -23,7 +23,7 @@ class Phong
         void setSucChua(int sucChua = 4);
         vector <SinhVien>* getSinhVien();
         int getSoLuongSinhVien();
-        void del(SinhVien a);
+        bool del(SinhVien a);
         // void find(SinhVien a);
-        void add(SinhVien a);
+        bool add(SinhVien a);
 };
