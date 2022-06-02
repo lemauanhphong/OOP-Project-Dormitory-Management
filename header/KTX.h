@@ -29,7 +29,6 @@ public:
     void inThongTinKTX();
     void suaThongTinKTX();
     void inThongTinToa();
-    void inThongTinPhong();
     void dangKySinhVien();
     void huyDangKySinhVien();
 };
