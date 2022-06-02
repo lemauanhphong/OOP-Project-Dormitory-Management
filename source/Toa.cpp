@@ -15,7 +15,7 @@ Toa::~Toa()
 
 int Toa::getSucChua()
 {
-    return this->getSucChua;
+    return this->sucChua;
 }
 
 void Toa::setSucChua(int sucChua)
@@ -47,7 +47,7 @@ vector <Phong*> Toa::getPhongTrong()
 {
     vector <Phong*> ret;
     for (auto x: this->phong)
-        if (x.getSoLuongSinhVien < x.getSucChua)
+        if (x.getSoLuongSinhVien() < x.getSucChua())
             ret.push_back(&x);
             
     return ret;
@@ -55,27 +55,27 @@ vector <Phong*> Toa::getPhongTrong()
 
 void Toa::xepPhong(Phong* a, SinhVien x)
 {
-    if (a->getSucChua > a->getSoLuongSinhVien && a->getToa == this->toa)
-        a.add(x);
+    if (a->getSucChua() > a->getSoLuongSinhVien() && a->getToa() == this->toa)
+        a->add(x);
 }
 
 void Toa::add(int soPhong, int sucChua)
 {
     if (!this->getPhongSo(soPhong))
-        this->phong.push_back(Phong(soPhong, this->toa, this->setSucChua));
+        this->phong.push_back(Phong(soPhong, this->toa, this->getSucChua()));
 }
 
-void Toa::add(int soPhong)
+void Toa::add(int soPhong, int sucChua)
 {
     for (int i = 0; i < this->phong.size(); ++i)
-        if (this->phong[i].getSoPhong == soPhong)
+        if (this->phong[i].getSoPhong() == soPhong)
             this->phong.erase(this->phong.begin() + i);
 }
 
 Phong* Toa::getPhongSo(int soPhong)
 {
     for (auto x: this->phong)
-        if (x.getSoPhong == soPhong)
+        if (x.getSoPhong() == soPhong)
             return &x;
 
     return NULL;

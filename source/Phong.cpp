@@ -66,7 +66,7 @@ void Phong::del(SinhVien a)
 
 void Phong::add(SinhVien a)
 {
-    if (this->setSucChua <= this->getSoLuongSinhVien()) return;
+    if (this->getSucChua() <= this->getSoLuongSinhVien()) return;
     a.setPhong(this->soPhong);
     a.setToa(this->toa);
     this->sinhVien.push_back(a);
