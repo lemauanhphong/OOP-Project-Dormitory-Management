@@ -41,12 +41,12 @@
             -   `id` : là số cccd hoặc cmnd
             -   `sdt` : số điện thoại liên lạc của đối tượng
         -   Phương thức: Ngoài `constructor` và `destructor` thì lớp `Human` còn có 1 số phương thức khác như:
-            -   `getTen` : getter `ten` của đối tượng
-            -   `setTen` : setter `ten` của đối tượng
-            -   `getId` : getter `id` của đối tượng
-            -   `setId` : setter `id` của dối tượng
-            -   `getSdt` : getter `sdt` của đối tượng
-            -   `setSdt` : setter `sdt` của đối tượng
+            -   `getTen` : getter `ten` trả về tên của đối tượng
+            -   `setTen` : setter `ten` thay đổi tên của của đối tượng
+            -   `getId` : getter `id` trả về id của đối tượng
+            -   `setId` : setter `id` thay đổi id của dối tượng
+            -   `getSdt` : getter `sdt` trả về sdt của đối tượng
+            -   `setSdt` : setter `sdt` thay đổi sdt của đối tượng
     - Lớp `SinhVien`: kế thừa từ lớp `Human`
         -   Thuộc tính: ngoài những thuộc tính được kế thừa từ lớp `Human` thì `SinhVien` còn có những thuộc tính khác như:
             -   `mssv` : mã số sinh viên
@@ -57,16 +57,16 @@
         -   Phương thức: ngoài những phương thức được kế thừa từ lớp `Human`, các `constructor` và `destructor` thì `SinhVien` còn có những phương thức khác như:
             -   `thongTin` : đưa ra những thông tin hiện có của sinh viên như tên, mssv, sdt, ...
             -   `nhapThongTin` : nhập thông tin cá nhân của sinh viên bao gồm tên, mssv, sdt, ...
-            -   `getMssv` : getter `mssv` của lớp `SinhVien`
-            -   `setMssv` : setter `mssv` của lớp `SinhVien`
-            -   `getSoPhong` : getter `soPhong` của lớp `SinhVien`
-            -   `setSoPhong` : setter `soPhong` của lớp `SinhVien`
-            -   `getTruong` : getter `truong` của lớp `SinhVien`
-            -   `setTruong` : setter `truong` của lớp `SinhVien`
-            -   `getToa` : getter `toa` của lớp `SinhVien`
-            -   `setToa` : setter `toa` của lớp `SinhVien`
-            -   `getKhoa` : getter `khoa` của lớp `SinhVien`
-            -   `setKhoa` : setter `khoa` của lớp `SinhVien`
+            -   `getMssv` : getter `mssv` trả về mssv của lớp `SinhVien`
+            -   `setMssv` : setter `mssv` thay đổi mssv của lớp `SinhVien`
+            -   `getSoPhong` : getter `soPhong` trả về mã số phòng của lớp `SinhVien`
+            -   `setSoPhong` : setter `soPhong` thay đổi mã số phòng của lớp `SinhVien`
+            -   `getTruong` : getter `truong` trả về tên trường của lớp `SinhVien`
+            -   `setTruong` : setter `truong` thay đổi tên trường của lớp `SinhVien`
+            -   `getToa` : getter `toa` trả về tên tòa ở của lớp `SinhVien`
+            -   `setToa` : setter `toa` thay đổi tên tòa ở của lớp `SinhVien`
+            -   `getKhoa` : getter `khoa` trả về khoa của của lớp `SinhVien`
+            -   `setKhoa` : setter `khoa` thay đổi khoa của lớp `SinhVien`
 - Xây dựng lớp `Toa` để biểu diễn tòa nhà bên trong ký túc xá:
     - Thuộc tính:
         - `string toa`: tên tòa nhà.
