@@ -11,14 +11,23 @@ class sinhvien : public human
         sinhvien();
         ~sinhvien();
         void thong_tin();
-        string phong();
+        string getToa();///getter toa
+        void setToa(string a);///setter toa
+        int getPhong();/// getter SoPhong
+        void setPhong(int a); /// setter SoPhong
+        string getMssv(); /// getter Mssv
+        void setMssv(string a); ///  setter Mssv
+        string getKhoa(); /// getter Khoa
+        void setKhoa(string a); ///setter Khoa
+        string getTruong();/// getter Truong
+        void setTruong(string a); /// setter Truong
 
     protected:
-        string mssv;
-        string truong;
-        string toa_ktx; /// toa ktx sinh vien dang o
-        string khoa;
-        int room; /// phong o bn
+        string Mssv;
+        string Truong;
+        string toa; /// toa ktx sinh vien dang o
+        string Khoa;
+        int SoPhong; /// phong o bn
 
     private:
 };
