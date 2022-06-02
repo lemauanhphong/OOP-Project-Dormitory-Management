@@ -69,7 +69,8 @@ void SinhVien::setSoPhong(int a)
 void SinhVien::nhapThongTin()
 {
     cout<<"Ho ten sinh vien:\n";
-    cin>>ten;
+    cin.ignore();
+    getline(cin, ten);
     cout<<"So cccd/cmnd:\n";
     cin>>id;
     cout<<"So dien thoai:\n";
@@ -77,9 +78,11 @@ void SinhVien::nhapThongTin()
     cout<<"Ma so sinh vien:\n";
     cin>>mssv;
     cout<<"Truong sinh vien dang theo hoc:\n";
-    cin>>truong;
+    cin.ignore();
+    getline(cin, truong);
     cout<<"Khoa sinh vien dang theo hoc:\n";
-    cin>>khoa;
+    cin.ignore();
+    getline(cin, khoa);
 }
 bool operator == (SinhVien a,SinhVien b)
 {
