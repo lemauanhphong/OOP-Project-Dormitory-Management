@@ -80,3 +80,11 @@ Phong* Toa::getPhongSo(int soPhong)
 
     return NULL;
 }
+
+void Toa::inThongTinPhong()
+{
+    for (auto x: this->phong)
+    {
+        cout << "Phong " << x.getSoPhong() << ", toa " << x.getToa() << ", suc chua " << x.getSucChua() << ", con trong " << x.getSucChua() - x.getSoLuongSinhVien() << '\n';
+    }
+}
