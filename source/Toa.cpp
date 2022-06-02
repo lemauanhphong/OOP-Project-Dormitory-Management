@@ -2,14 +2,25 @@
 
 Toa::Toa() {}
 
-Toa::Toa(string toa)
+Toa::Toa(string toa, int sucChua)
 {
     this->toa = toa;
+    this->sucChua = sucChua;
 }
 
 Toa::~Toa()
 {
     phong.clear();
+}
+
+int Toa::getSucChua()
+{
+    return this->getSucChua;
+}
+
+void Toa::setSucChua(int sucChua)
+{
+    this->sucChua = sucChua;
 }
 
 string Toa::getToa()
