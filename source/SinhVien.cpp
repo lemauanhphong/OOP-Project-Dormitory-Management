@@ -9,7 +9,7 @@ SinhVien::~SinhVien()
 {
     //dtor
 }
-SinhVien::SinhVien(string Ten ,string Id, string Sdt, string Mssv,string Truong, string Toa, string Khoa, int SoPhong) : human(Ten, Id, Sdt)
+SinhVien::SinhVien(string Ten ,string Id, string Sdt, string Mssv,string Truong, string Toa, string Khoa, int SoPhong) : Human(Ten, Id, Sdt)
 {
     mssv = Mssv;
     toa = Toa;

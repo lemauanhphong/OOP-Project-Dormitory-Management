@@ -2,11 +2,11 @@
 #define SINHVIEN_H
 
 #include <bits/stdc++.h>
-#include "human.h"
+#include "Human.h"
 using namespace std;
 /// just a normal comment
 
-class SinhVien : public human
+class SinhVien : public Human
 {
     public:
         SinhVien();
