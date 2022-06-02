@@ -7,7 +7,7 @@ class Toa
     private:
         string toa;
         vector <Phong> phong;
-        int sucChua();
+        int sucChua;
 
     public:
         Toa();
@@ -21,4 +21,6 @@ class Toa
         void setSucChua();
         vector <Phong*> getPhongTrong();
         void xepPhong(Phong* a, SinhVien x);
+        Phong* getPhongSo(int soPhong);
+        void add(int soPhong, int sucChua);
 };
