@@ -23,4 +23,5 @@ class Toa
         void xepPhong(Phong* a, SinhVien x);
         Phong* getPhongSo(int soPhong);
         void add(int soPhong, int sucChua);
+        void del(int soPhong);
 };

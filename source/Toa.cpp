@@ -61,11 +61,11 @@ void Toa::xepPhong(Phong* a, SinhVien x)
 
 void Toa::add(int soPhong, int sucChua)
 {
-    if (!this->getPhongSo(soPhong))
-        this->phong.push_back(Phong(soPhong, this->toa, this->getSucChua()));
+    if (!this->getPhongSo(soPhong) && this->getSucChua() < this->getSoLuongPhong())
+        this->phong.push_back(Phong(soPhong, this->toa, sucChua));
 }
 
-void Toa::add(int soPhong, int sucChua)
+void Toa::del(int soPhong)
 {
     for (int i = 0; i < this->phong.size(); ++i)
         if (this->phong[i].getSoPhong() == soPhong)
