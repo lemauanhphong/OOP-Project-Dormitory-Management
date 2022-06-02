@@ -9,6 +9,7 @@ class human
 
     public:
         human();
+        human(string Ten ,string Id,int Tuoi, string Sdt);/// have to input all parameter, so if it's bugged, it will be easy to find
         ~human();
         string getTen(); /// getter name
         void setTen(string a); ///setter name
