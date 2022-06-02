@@ -63,6 +63,7 @@
         - `Phong* getPhongSo(int soPhong)`: trả về con trỏ trỏ tới phòng có số là `soPhong` nếu phòng đó không tồn tại hoặc không còn chỗ trống thì trả về `NULL`.
         - `bool add(int soPhong, int sucChua)`: thêm một phòng với sức chứa của phòng là `sucChua` và số của phòng là `soPhong` nếu chưa phòng nào lấy số đó. Hàm trả về `true` nếu thêm thành công và `false` nếu ngược lại.
         - `bool del(int soPhong)`: tìm trong tòa phòng có số phòng là `soPhong` và xóa nó ra khỏi tòa. Hàm trả về `true` nếu xóa thành công và `false` nếu ngược lại.
+        - `void inThongTinPhong()`: In ra thông tin của các phòng có trong tòa.
         
 
 - Xây dựng lớp `Phong` để biểu diễn phòng ở của sinh viên:
