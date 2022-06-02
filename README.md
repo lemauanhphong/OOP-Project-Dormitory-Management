@@ -1,5 +1,7 @@
 # Xây dựng chương trình quản lý sinh viên ký túc xá đơn giản
 
+**Project được thực hiện trên nhân Linux, việc sử dụng trên các hệ điều hành khác có thể xảy ra lỗi.**
+
 ## 0. Thông tin:
 - Thành viên:
     - Nguyễn Duy Huy - 21520042 - ATTN 2021
