@@ -54,7 +54,7 @@ int Phong::getSoLuongSinhVien()
     return this->sinhVien.size();
 }
 
-void Phong::del(SinhVien a)
+bool Phong::del(SinhVien a)
 {
     for (int i = 0; i < this->sinhVien.size(); ++i)
         if (this->sinhVien[i] == a)
