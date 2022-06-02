@@ -10,10 +10,14 @@ class sinhvien : public human
     public:
         sinhvien();
         ~sinhvien();
+        void thong_tin();
+        string phong();
+
     protected:
         string mssv;
         string truong;
         string toa_ktx; /// toa ktx sinh vien dang o
+        string khoa;
         int room; /// phong o bn
 
     private:
