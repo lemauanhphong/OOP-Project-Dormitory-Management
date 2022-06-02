@@ -4,13 +4,13 @@
 using namespace std;
 
 
-class human
+class Human
 {
 
     public:
-        human();
-        human(string Ten ,string Id, string Sdt);/// have to input all parameter, so if it's bugged, it will be easy to find
-        ~human();
+        Human();
+        Human(string Ten ,string Id, string Sdt);/// have to input all parameter, so if it's bugged, it will be easy to find
+        ~Human();
         string getTen(); /// getter name
         void setTen(string a); ///setter name
         string getId(); ///getter id, id is cccd or cmnd

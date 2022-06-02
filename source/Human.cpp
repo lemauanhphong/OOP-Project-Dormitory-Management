@@ -1,39 +1,39 @@
-#include "human.h"
+#include "Human.h"
 
-human::human()
+Human::Human()
 {
     //ctor
 }
 
-human::~human()
+Human::~Human()
 {
     //dtor
 }
-human::human(string Ten,string Id,string Sdt) : ten(Ten), id(Id), sdt(Sdt)
+Human::Human(string Ten,string Id,string Sdt) : ten(Ten), id(Id), sdt(Sdt)
 {
 
 }
-string human::getTen()
+string Human::getTen()
 {
     return ten;
 }
-string human::getId()
+string Human::getId()
 {
     return  id;
 }
-string human::getSdt()
+string Human::getSdt()
 {
     return sdt;
 }
-void human::setTen(string a)
+void Human::setTen(string a)
 {
     ten = a;
 }
-void human::setId(string a)
+void Human::setId(string a)
 {
     id = a;
 }
-void human::setSdt(string a)
+void Human::setSdt(string a)
 {
     sdt = a;
 }
