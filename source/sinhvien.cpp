@@ -37,6 +37,7 @@ string SinhVien::getKhoa()
 {
     return khoa;
 }
+/// just a normal comment
 string SinhVien::getTruong()
 {
     return truong;

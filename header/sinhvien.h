@@ -4,7 +4,7 @@
 #include <bits/stdc++.h>
 #include "human.h"
 using namespace std;
-
+/// just a normal comment
 
 class SinhVien : public human
 {
