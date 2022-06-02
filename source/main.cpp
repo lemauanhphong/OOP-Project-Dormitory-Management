@@ -34,6 +34,7 @@ void menu() {
                 ktx.inThongTinToa();
                 break;
             case '4':
+                cout << "Tinh nang dang duoc bao tri.\n";
                 // ktx.inThongTinPhong();
                 break;
             case '5':
