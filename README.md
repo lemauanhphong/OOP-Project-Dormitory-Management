@@ -14,7 +14,38 @@
 
 ## 2. Ý tưởng thực hiện:
 - Xây dựng lớp `KTX` để biểu diễn ký túc xá:
-- Xây dựng lớp `SinhVien` kế thừa từ lớp `Human` để biểu diễn sinh viên:
+-   Xây dựng lớp `SinhVien` kế thừa từ lớp `Human` dể biểu diễn sinh viên:
+    -   Lớp `Human`:
+        -   Thuộc tính:
+            -   `ten` : tên của đối tượng
+            -   `id` : là số cccd hoặc cmnd
+            -   `sdt` : số điện thoại liên lạc của đối tượng
+        -   Phương thức: Ngoài `constructor` và `destructor` thì lớp `Human` còn có 1 số phương thức khác như:
+            -   `getTen` : getter `ten` của đối tượng
+            -   `setTen` : setter `ten` của đối tượng
+            -   `getId` : getter `id` của đối tượng
+            -   `setId` : setter `id` của dối tượng
+            -   `getSdt` : getter `sdt` của đối tượng
+            -   `setSdt` : setter `sdt` của đối tượng
+    - Lớp `SinhVien`: kế thừa từ lớp `Human`
+        -   Thuộc tính: ngoài những thuộc tính được kế thừa từ lớp `Human` thì `SinhVien` còn có những thuộc tính khác như:
+            -   `mssv` : mã số sinh viên
+            -   `truong` : trường học hiện tại mà sinh viên đang theo học
+            -   `khoa` : khoa hiện tại mà sinh viên đang học
+            -   `toa` : tòa nhà kí túc xá mà sinh viên đang ở
+            -   `soPhong` : phòng ở của sinh viên trong tòa nhà đó
+        -   Phương thức: ngoài những phương thức được kế thừa từ lớp `Human`, các `constructor` và `destructor` thì `SinhVien` còn có những phương thức khác như:
+            -   `thongTin` : đưa ra những thông tin hiện có của sinh viên như tên, mssv, sdt, ...
+            -   `getMssv` : getter `mssv` của lớp `SinhVien`
+            -   `setMssv` : setter `mssv` của lớp `SinhVien`
+            -   `getSoPhong` : getter `soPhong` của lớp `SinhVien`
+            -   `setSoPhong` : setter `soPhong` của lớp `SinhVien`
+            -   `getTruong` : getter `truong` của lớp `SinhVien`
+            -   `setTruong` : setter `truong` của lớp `SinhVien`
+            -   `getToa` : getter `toa` của lớp `SinhVien`
+            -   `setToa` : setter `toa` của lớp `SinhVien`
+            -   `getKhoa` : getter `khoa` của lớp `SinhVien`
+            -   `setKhoa` : setter `khoa` của lớp `SinhVien`
 - Xây dựng lớp `Toa` để biểu diễn tòa nhà bên trong ký túc xá:
     - Thuộc tính:
         - `string toa`: tên tòa nhà.
