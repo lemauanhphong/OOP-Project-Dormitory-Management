@@ -2,54 +2,138 @@
 #include "KTX.h"
 using namespace std;
 
-KTX::KTX(string _name = "", string _address = "", string _phoneNumber = "", string _email = "", vector <Toa> _toa = vector <Toa> ()) {
-    name = _name;
-    address = _address;
-    phoneNumber = _phoneNumber;
-    email = _email;
-    toa = _toa;
+KTX::KTX(string ten, string diaChi, string SDT, string email, vector <Toa> toa) {
+    this->ten = ten;
+    this->diaChi = diaChi;
+    this->SDT = SDT;
+    this->email = email;
+    this->toa = toa;
 }
 
+KTX::~KTX() {
+    this->toa.clear();
+}
+
+string KTX::getTen() {
+    return this->ten;
+}
+string KTX::getDiaChi() {
+    return this->diaChi;
+}
+string KTX::getSDT() {
+    return this->SDT;
+}
+string KTX::getEmail() {
+    return this->email;
+}
 int KTX::getSoLuongToa() {
-    return toa.size();
+    return this->toa.size();
+};
+
+void KTX::setTen(string ten) {
+    this->ten = ten;
+}
+void KTX::setDiaChi(string diaChi) {
+    this->diaChi = diaChi;
+}
+void KTX::setSDT(string SDT) {
+    this->SDT = SDT;
+}
+void KTX::setEmail(string email) {
+    this->email = email;
 }
 
-Toa KTX::getToa(int id) {
-    return toa[id];
+void KTX::inThongTinKTX() {
+    cout << "Ten: " << this->ten << endl;
+    cout << "Dia chi: " << this->diaChi << endl;
+    cout << "SDT: " << this->SDT << endl;
+    cout << "Email: " << this->email << endl;
 }
 
-void KTX::setToa(int id, Toa obj) {
-    toa[id] = obj;
+void KTX::suaThongTinKTX() {
+    string input;
+
+    cout << "Nhap ten: ";
+    cin.ignore();
+    cin >> input;
+    setTen(input);
+
+    cout << "Nhap dia chi: ";
+    cin >> input;
+    setDiaChi(input);
+
+    cout << "Nhap SDT: ";
+    cin >> input;
+    setSDT(input);
+
+    cout << "Nhap Email: ";
+    cin >> input;
+    setEmail(input);
 }
 
-void KTX::addToa(Toa obj) {
-    toa.push_back(obj);
-}
-
-void KTX::deleteToa(int id) {
-    toa.erase(toa.begin() + id);
-}
-
-Phong KTX::getPhong(int toaId, int phongId) {
-    return getToa(toaId).getPhong(phongId);
-}
-
-pair <int, int> KTX::getIdPhongTrong(int toaId = -1) {
-    if (toaId != -1)
-        return make_pair(toaId, getToa(toaId).getIdPhongTrong());
-
+void KTX::inThongTinToa() {
+    cout << "Danh sach cac toa KTX: " << endl;
     for (int i = 0; i < getSoLuongToa(); ++i) {
-        int phongId = getToa(toaId).getIdPhongTrong();
-        if (phongId != -1)
-            return {toaId, phongId};
+        cout << i << ". Toa " << this->toa[i].getToa() << endl;
     }
+
+    cout << "Vui long chon 1 toa de xem thong tin (0,1,2,...): ";
+    int soToa;
+    cin >> soToa;
+    toa[soToa].inThongTinToa();
 }
 
-void KTX::xepPhong(SinhVien sinhvien, int toaId, int phongId) {
-    getToa(toaId).getPhong(phongId).addSinhVien(sinhvien);
+void KTX::inThongTinPhong() {
+    cout << "Danh sach cac toa KTX: " << endl;
+    for (int i = 0; i < getSoLuongToa(); ++i) {
+        cout << i << ". Toa " << this->toa[i].getToa() << endl;
+    }
+
+    cout << "Vui long chon 1 toa de xem thong tin (0,1,2,...): ";
+    int selection;
+    cin >> selection;
+    toa[selection].inThongTinPhong();
 }
 
-void KTX::xepPhongTuDong(SinhVien sinhvien, int toaId = -1) {
-    auto slot = getIdPhongTrong(toaId);
-    getToa(slot.first).getPhong(slot.second).addSinhVien(sinhvien);
+void KTX::dangKySinhVien() {
+    bool conTrong = false;
+
+    cout << "Danh sach cac toa con trong:" << endl;
+    for (int i = 0; i < getSoLuongToa(); ++i)
+        if (!toa[i].conTrong()) {
+            cout << i << ". Toa " << this->toa[i].getToa() << endl;
+            conTrong = true;
+        }
+
+    if (!conTrong) {
+        cout << "Khong co toa nao!" << endl;
+        return;
+    }
+
+    cout << "Vui long chon 1 toa de dang ki (1,2,3,...): ";
+    int soToa;
+    cin >> soToa;
+    toa[soToa].dangKySinhVien();
+}
+
+void KTX::huyDangKySinhVien() {
+    bool trong = true;
+
+    cout << "Danh sach cac toa da co sinh vien dang ky:" << endl;
+    for (int i = 0; i < getSoLuongToa(); ++i)
+        if (!toa[i].trong()) {
+            cout << i << ". Toa " << this->toa[i].getToa() << endl;
+            trong = false;
+        }
+
+    if (trong) {
+        cout << "Khong co toa nao!" << endl;
+        return;
+    }
+
+    cout << "Vui long chon 1 toa de dang ki (1,2,3,...): ";
+    int soToa;
+    cin >> soToa;
+    toa[soToa].huyDangKySinhVien();
+
 }

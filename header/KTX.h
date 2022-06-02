@@ -2,39 +2,36 @@
 #define KTX_H_INCLUDED
 
 #include <bits/stdc++.h>
+#include "Toa.h"
 using namespace std;
-/*
-class Toa {
-    void getPhong(int id);
-    void getIdPhongTrong();
-};
 
-class Phong {};
-
-class SinhVien {};
-*/
 class KTX {
-    string name;
-    string address;
-    string phoneNumber;
+    string ten;
+    string diaChi;
+    string SDT;
     string email;
     vector <Toa> toa;
 public:
-    KTX(string _name, string _address, string _phoneNumber, string _email, vector <Toa> _toa);
+    KTX(string ten = "", string diaChi = "", string SDT = "", string email = "", vector <Toa> toa = vector <Toa> ());
     ~KTX();
 
+    string getTen();
+    string getDiaChi();
+    string getSDT();
+    string getEmail();
     int getSoLuongToa();
-    Toa getToa(int id);
-    void setToa(int id, Toa obj);
-    void addToa(Toa toa);
-    void deleteToa(int id);
 
+    void setTen(string ten);
+    void setDiaChi(string diaChi);
+    void setSDT(string SDT);
+    void setEmail(string email);
 
-    Phong getPhong(int toaId, int phongId);
-    pair <int, int> getIdPhongTrong(int toaId);
-
-    void xepPhong(SinhVien sinhvien, int toaId, int phongId);
-    void xepPhongTuDong(SinhVien sinhvien, int toaId);
+    void inThongTinKTX();
+    void suaThongTinKTX();
+    void inThongTinToa();
+    void inThongTinPhong();
+    void dangKySinhVien();
+    void huyDangKySinhVien();
 };
 
 #endif // KTX_H_INCLUDED
