@@ -109,9 +109,9 @@ void KTX::dangKySinhVien() {
     int soPhong;
     cin >> soPhong;
 
-    // SinhVien sinhVien;
-    // sinhVien.nhap();
-    // xepPhong(toa[soToa].getPhongSo(soPhong), sinhVien);
+    SinhVien sinhVien;
+    sinhVien.nhapThongTin();
+    toa[soToa].xepPhong(toa[soToa].getPhongSo(soPhong), sinhVien);
 }
 
 void KTX::huyDangKySinhVien() {
