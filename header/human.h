@@ -10,20 +10,20 @@ class human
     public:
         human();
         ~human();
-        string ho_ten(); /// getter name
-        int getAge(); /// getter age
-        void setAge(int a); ///setter Age
-        string getCccd(); ///getter cccd
-        void setCccd(string a); ///setter cccd
+        string getTen(); /// getter name
+        void setTen(string a); ///setter name
+        int getTuoi(); /// getter age
+        void setTuoi(int a); ///setter Age
+        string getId(); ///getter id, id is cccd or cmnd
+        void setId(string a); ///setter id
         string getSdt();/// getter sdt
         void setSdt(string a); ///setter Sdt
-        void nhap_du_lieu();
 
     protected:
-        string Name;
-        string Cccd;
-        int Age;
-        string Sdt;
+        string ten;
+        string id;
+        int tuoi;
+        string sdt;
 };
 
 #endif // HUMAN_H

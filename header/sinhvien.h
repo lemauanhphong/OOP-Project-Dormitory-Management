@@ -10,7 +10,7 @@ class sinhvien : public human
     public:
         sinhvien();
         ~sinhvien();
-        void thong_tin();
+        void thongTin(); /// print all information related to SinhVien
         string getToa();///getter toa
         void setToa(string a);///setter toa
         int getPhong();/// getter SoPhong
@@ -23,11 +23,11 @@ class sinhvien : public human
         void setTruong(string a); /// setter Truong
 
     protected:
-        string Mssv;
-        string Truong;
+        string mssv;
+        string truong;
         string toa; /// toa ktx sinh vien dang o
-        string Khoa;
-        int SoPhong; /// phong o bn
+        string khoa;
+        int soPhong; /// phong o bn
 
     private:
 };
