@@ -56,6 +56,7 @@
             -   `soPhong` : phòng ở của sinh viên trong tòa nhà đó
         -   Phương thức: ngoài những phương thức được kế thừa từ lớp `Human`, các `constructor` và `destructor` thì `SinhVien` còn có những phương thức khác như:
             -   `thongTin` : đưa ra những thông tin hiện có của sinh viên như tên, mssv, sdt, ...
+            -   `nhapThongTin` : nhập thông tin cá nhân của sinh viên bao gồm tên, mssv, sdt, ...
             -   `getMssv` : getter `mssv` của lớp `SinhVien`
             -   `setMssv` : setter `mssv` của lớp `SinhVien`
             -   `getSoPhong` : getter `soPhong` của lớp `SinhVien`
