@@ -6,7 +6,7 @@ void clrscr() {
 }
 
 void menu() {
-    KTX ktx;
+    KTX ktx("A", "Thu Duc", "0123456789", "ktx@email.com", {});
 
     while (true) {
         clrscr();
@@ -34,7 +34,7 @@ void menu() {
                 ktx.inThongTinToa();
                 break;
             case '4':
-                ktx.inThongTinPhong();
+                // ktx.inThongTinPhong();
                 break;
             case '5':
                 ktx.dangKySinhVien();
