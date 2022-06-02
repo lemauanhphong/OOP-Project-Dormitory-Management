@@ -80,19 +80,7 @@ void KTX::inThongTinToa() {
     cout << "Vui long chon 1 toa de xem thong tin (0,1,2,...): ";
     int soToa;
     cin >> soToa;
-    toa[soToa].inThongTinToa();
-}
-
-void KTX::inThongTinPhong() {
-    cout << "Danh sach cac toa KTX: " << endl;
-    for (int i = 0; i < getSoLuongToa(); ++i) {
-        cout << i << ". Toa " << this->toa[i].getToa() << endl;
-    }
-
-    cout << "Vui long chon 1 toa de xem thong tin (0,1,2,...): ";
-    int selection;
-    cin >> selection;
-    toa[selection].inThongTinPhong();
+    toa[soToa].inThongTinPhong();
 }
 
 void KTX::dangKySinhVien() {
@@ -100,7 +88,7 @@ void KTX::dangKySinhVien() {
 
     cout << "Danh sach cac toa con trong:" << endl;
     for (int i = 0; i < getSoLuongToa(); ++i)
-        if (!toa[i].conTrong()) {
+        {//if (!toa[i].isFull()) {
             cout << i << ". Toa " << this->toa[i].getToa() << endl;
             conTrong = true;
         }
@@ -113,7 +101,17 @@ void KTX::dangKySinhVien() {
     cout << "Vui long chon 1 toa de dang ki (1,2,3,...): ";
     int soToa;
     cin >> soToa;
-    toa[soToa].dangKySinhVien();
+
+    cout << "Danh sach phong trong:" << endl;
+    toa[soToa].inThongTinPhong();
+
+    cout << "Vui long nhap so phong de dang ki: ";
+    int soPhong;
+    cin >> soPhong;
+/*
+    SinhVien sinhVien;
+    sinhVien.nhap();
+    xepPhong(toa[soToa].getPhongSo(soPhong), sinhVien);*/
 }
 
 void KTX::huyDangKySinhVien() {
@@ -121,7 +119,7 @@ void KTX::huyDangKySinhVien() {
 
     cout << "Danh sach cac toa da co sinh vien dang ky:" << endl;
     for (int i = 0; i < getSoLuongToa(); ++i)
-        if (!toa[i].trong()) {
+        {//if (!toa[i].isEmpty()) {
             cout << i << ". Toa " << this->toa[i].getToa() << endl;
             trong = false;
         }
@@ -131,9 +129,27 @@ void KTX::huyDangKySinhVien() {
         return;
     }
 
-    cout << "Vui long chon 1 toa de dang ki (1,2,3,...): ";
+    cout << "Vui long chon 1 toa de tiep tuc (1,2,3,...): ";
     int soToa;
     cin >> soToa;
-    toa[soToa].huyDangKySinhVien();
 
+    cout << "Danh sach phong:" << endl;
+    toa[soToa].inThongTinPhong();
+
+    cout << "Vui long nhap so phong de tiep tuc: ";
+    int soPhong;
+    cin >> soPhong;
+
+    Phong* phong = toa[soToa].getPhongSo(soPhong);
+    vector <SinhVien> *sinhVien = phong->getSinhVien();
+
+    for (int i = 0; i < sinhVien->size(); ++i) {
+        cout << "Sinh vien thu " << i << "L";
+        sinhVien[i].xuat();
+    }
+
+    cout << "Vui long chon 1 sinh vien de huy dang ki (0,1,2,..): ";
+    int soSinhVien;
+    cin >> soSinhVien;
+    phong->del(sinhVien->at(soSinhVien));
 }
