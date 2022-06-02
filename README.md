@@ -20,8 +20,21 @@
 
 ## 2. Ý tưởng thực hiện:
 - Cần có một lớp biểu diễn ký túc xá, ký túc xá tương tác trực tiếp với tòa nhà, tòa nhà tương tác trực tiếp với phòng ở, phòng ở sẽ tương tác trực tiếp với sinh viên.
-- Xây dựng lớp `KTX` để biểu diễn ký túc xá:
--   Xây dựng lớp `SinhVien` kế thừa từ lớp `Human` dể biểu diễn sinh viên:
+- Xây dựng lớp `KTX` để biểu diễn ký túc xá: Ngoài những constructor, destructor, getter và setter, lớp `KTX` có một số phương thức sau:
+    - Thuộc tính:
+        - `string ten`: Tên của ký túc xá.
+        - `string diaChi`: Địa chỉ của ký túc xá.
+        - `string SDT`: Số điện thoại của ký túc xá.
+        - `string email`: Email của ký túc xá.
+        - `vector <Toa> toa`: Danh sách các tòa nhà của ký túc xá,
+    - Phương thức:
+        - `void inThongTinKTX()`: In thông tin về ký túc xá.
+        - `void huyDangKySinhVien()`: Hủy đăng ký sử dụng ký túc xá cho sinh viên.
+        - `void dangKySinhVien()`: Đăng ký sử dụng ký túc xá cho sinh viên.
+        - `void inThongTinToa()`: In ra thông tin tòa nhà nào đó.
+        - `void suaThongTinKTX()`: Sửa thông tin của ký túc xá.
+        - `void inThongTinPhong()`: In ra thông tin một phòng nào đó.
+- Xây dựng lớp `SinhVien` kế thừa từ lớp `Human` dể biểu diễn sinh viên:
     -   Lớp `Human`:
         -   Thuộc tính:
             -   `ten` : tên của đối tượng
