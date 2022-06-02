@@ -22,7 +22,7 @@ class Toa
         vector <Phong*> getPhongTrong();
         void xepPhong(Phong* a, SinhVien x);
         Phong* getPhongSo(int soPhong);
-        void add(int soPhong, int sucChua);
-        void del(int soPhong);
-        void inThongTinPhong()
+        bool add(int soPhong, int sucChua);
+        bool del(int soPhong);
+        void inThongTinPhong();
 };
