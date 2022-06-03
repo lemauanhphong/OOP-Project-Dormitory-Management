@@ -255,7 +255,6 @@ void KTX::themPhong() {
 
     for (int i = 0; i < soLuongPhong; ++i) {
         int soPhong = toa[soToa].getSoLuongPhong() + i;
-        cout << soPhong << endl;
         toa[soToa].add(soPhong, sucChua);
     }
 }
