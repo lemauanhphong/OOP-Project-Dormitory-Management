@@ -18,7 +18,10 @@ void menu() {
         cout << "4. In ra thong tin phong" << endl;
         cout << "5. Dang ki cho sinh vien moi" << endl;
         cout << "6. Huy dang ki cho sinh vien" << endl;
-        cout << "7. Thoat" << endl;
+        cout << "7. Them toa vao KTX" << endl;
+        cout << "8. Them phong vao toa" << endl;
+        cout << "9. Thoat" << endl;
+        cout << "Nhap lua chon (1,2,3,...): ";
 
         char selection;
         cin >> selection;
@@ -34,8 +37,7 @@ void menu() {
                 ktx.inThongTinToa();
                 break;
             case '4':
-                cout << "Tinh nang dang duoc bao tri.\n";
-                // ktx.inThongTinPhong();
+                ktx.inThongTinPhong();
                 break;
             case '5':
                 ktx.dangKySinhVien();
@@ -44,9 +46,16 @@ void menu() {
                 ktx.huyDangKySinhVien();
                 break;
             case '7':
+                ktx.themToa();
+                break;
+            case '8':
+                ktx.themPhong();
+                break;
+            case '9':
                 exit(0);
         }
 
+        cout << "Bam Enter de tiep tuc..." << endl;
         cin.ignore();
         cin.get();
     }
