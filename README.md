@@ -36,6 +36,8 @@
         - `void inThongTinToa()`: In ra thông tin tòa nhà nào đó.
         - `void suaThongTinKTX()`: Sửa thông tin của ký túc xá.
         - `void inThongTinPhong()`: In ra thông tin một phòng nào đó.
+        - `void themToa()`: Thêm một số tòa vào ký túc xá.
+        - `void themPhong()`: Thêm một số phòng vào tòa ký túc xá.
 - Xây dựng lớp `SinhVien` kế thừa từ lớp `Human` dể biểu diễn sinh viên:
     -   Lớp `Human`:
         -   Thuộc tính:
