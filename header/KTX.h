@@ -29,8 +29,11 @@ public:
     void inThongTinKTX();
     void suaThongTinKTX();
     void inThongTinToa();
+    void inThongTinPhong();
     void dangKySinhVien();
     void huyDangKySinhVien();
+    void themToa();
+    void themPhong();
 };
 
 #endif // KTX_H_INCLUDED
